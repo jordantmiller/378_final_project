@@ -8,7 +8,7 @@ public class PlayerHealthScript : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthbar;
-    public float damageMultiplier = 1.0f;
+    public float damageMultiplier = 0.02f;
     public SceneController sc;
     public AudioSource audioSource;
 

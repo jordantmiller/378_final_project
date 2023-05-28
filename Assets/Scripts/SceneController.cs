@@ -24,7 +24,6 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        winText.enabled = false;
         controlText.enabled = false;
         creditText.enabled = false;
         startButton.onClick.AddListener(OnStartClick);
@@ -76,7 +75,6 @@ public class SceneController : MonoBehaviour
     public void winScreen() {
         this.playerRb.velocity = Vector2.zero;
         this.playerRb.angularVelocity = 0;
-        this.winText.enabled = true;
     }
 
     private void OnStartClick() {
