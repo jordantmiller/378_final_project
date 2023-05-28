@@ -10,12 +10,6 @@ public class SceneController : MonoBehaviour
     public TextMeshProUGUI winText;
     public TextMeshProUGUI controlText;
     public TextMeshProUGUI creditText;
-    public TextMeshProUGUI storyText1;
-    public TextMeshProUGUI storyText2;
-    public TextMeshProUGUI storyText3;
-    public TextMeshProUGUI storyText4;
-    public TextMeshProUGUI storyText5;
-    public TextMeshProUGUI storyText6;
 
     public Button startButton;
     public Button controlsButton;
@@ -33,12 +27,6 @@ public class SceneController : MonoBehaviour
         winText.enabled = false;
         controlText.enabled = false;
         creditText.enabled = false;
-        storyText1.enabled = false;
-        storyText2.enabled = false;
-        storyText3.enabled = false;
-        storyText4.enabled = false;
-        storyText5.enabled = false;
-        storyText6.enabled = false;
         startButton.onClick.AddListener(OnStartClick);
         controlsButton.onClick.AddListener(OnControlClick);
         creditsButton.onClick.AddListener(OnCreditClick);
@@ -54,30 +42,30 @@ public class SceneController : MonoBehaviour
             resetGame();
         }
 
-        if (started) {
-            timer += Time.deltaTime;
-        }
+        // if (started) {
+        //     timer += Time.deltaTime;
+        // }
 
-        if (timer > 2.0f && timer <= 10.0f) {
-            storyText1.enabled = true;
-        } else if (timer > 10.0f && timer <= 18.0f) {
-            storyText1.enabled = false;
-            storyText6.enabled = true;
-        } else if (timer > 26.0f && timer <= 34.0f) {
-            storyText6.enabled = false;
-            storyText5.enabled = true;
-        } else if (timer > 42.0f && timer <= 50.0f) {
-            storyText5.enabled = false;
-            storyText2.enabled = true;
-        } else if (timer > 58.0f && timer <= 66.0f) {
-            storyText2.enabled = false;
-            storyText3.enabled = true;
-        } else if (timer > 74.0f && timer <= 82.0f) {
-            storyText3.enabled = false;
-            storyText4.enabled = true;
-        } else if (timer > 90.0f) {
-            storyText4.enabled = false;
-        }
+        // if (timer > 2.0f && timer <= 10.0f) {
+        //     storyText1.enabled = true;
+        // } else if (timer > 10.0f && timer <= 18.0f) {
+        //     storyText1.enabled = false;
+        //     storyText6.enabled = true;
+        // } else if (timer > 26.0f && timer <= 34.0f) {
+        //     storyText6.enabled = false;
+        //     storyText5.enabled = true;
+        // } else if (timer > 42.0f && timer <= 50.0f) {
+        //     storyText5.enabled = false;
+        //     storyText2.enabled = true;
+        // } else if (timer > 58.0f && timer <= 66.0f) {
+        //     storyText2.enabled = false;
+        //     storyText3.enabled = true;
+        // } else if (timer > 74.0f && timer <= 82.0f) {
+        //     storyText3.enabled = false;
+        //     storyText4.enabled = true;
+        // } else if (timer > 90.0f) {
+        //     storyText4.enabled = false;
+        // }
         
     }
 
@@ -93,7 +81,7 @@ public class SceneController : MonoBehaviour
 
     private void OnStartClick() {
         pm = FindObjectsOfType<PlayerMovementScript>()[0];
-        playerRb.position = new Vector2(60, 10);
+        //playerRb.position = new Vector2(60, 10);
         pm.enableControls(true);
         controlsButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
