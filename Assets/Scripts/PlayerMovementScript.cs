@@ -8,6 +8,7 @@ public class PlayerMovementScript : MonoBehaviour
     public float thrust = 20f;
     public float torque = 20f;
     public float slowdownRate = 0.95f;
+    public float maxAngularVelocity = 10f;
     public bool controlsEnabled;
 
     // Start is called before the first frame update
@@ -53,6 +54,14 @@ public class PlayerMovementScript : MonoBehaviour
                 rb.velocity = rb.velocity * slowdownRate;
                 rb.angularVelocity = rb.angularVelocity * slowdownRate;
             }
+        }
+
+        if(rb.angularVelocity > maxAngularVelocity) {
+            rb.angularVelocity = maxAngularVelocity;
+        }
+
+        if(rb.angularVelocity < -maxAngularVelocity) {
+            rb.angularVelocity = -maxAngularVelocity;
         }
     }
 
