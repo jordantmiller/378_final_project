@@ -6,6 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float thrust = 20f;
+    public float leftRightModifier = 1.5f;
     public float torque = 20f;
     public float slowdownRate = 0.95f;
     public float maxAngularVelocity = 10f;
@@ -31,11 +32,11 @@ public class PlayerMovementScript : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.A)) {
-                rb.AddForce(-transform.right * thrust * Time.deltaTime, ForceMode2D.Force);
+                rb.AddForce(-transform.right * thrust * leftRightModifier * Time.deltaTime, ForceMode2D.Force);
             }
 
             if (Input.GetKey(KeyCode.D)) {
-                rb.AddForce(transform.right * thrust * Time.deltaTime, ForceMode2D.Force);
+                rb.AddForce(transform.right * thrust * leftRightModifier * Time.deltaTime, ForceMode2D.Force);
             }
 
             if (Input.GetKey(KeyCode.S)) {
