@@ -65,7 +65,11 @@ public class PlayerMovementScript : MonoBehaviour
             rb.angularVelocity = -maxAngularVelocity;
         }
     }
-
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "speedBoost"){
+            thrust = 25f;
+        }
+    }
     public void enableControls(bool b) {
         controlsEnabled = b;
     }
