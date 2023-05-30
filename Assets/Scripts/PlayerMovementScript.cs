@@ -12,14 +12,12 @@ public class PlayerMovementScript : MonoBehaviour
     public float maxAngularVelocity = 10f;
     public bool controlsEnabled;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         controlsEnabled = false;    
     }
 
-    // Update is called once per frame
     void Update()
     {
 
