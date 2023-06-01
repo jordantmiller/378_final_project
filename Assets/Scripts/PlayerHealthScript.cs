@@ -9,6 +9,7 @@ public class PlayerHealthScript : MonoBehaviour
     public int currentHealth;
     public HealthBar healthbar;
     public float damageMultiplier = 0.02f;
+    public float forceFieldNegation = 1f;
     public SceneController sc;
     public AudioSource audioSource;
 
@@ -36,7 +37,7 @@ public class PlayerHealthScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (!other.gameObject.CompareTag("Finish")) {
-            float damage = other.relativeVelocity.magnitude * damageMultiplier;
+            float damage = other.relativeVelocity.magnitude * damageMultiplier * forceFieldNegation;
             TakeDamage((int)damage);
             if (audioSource.isPlaying) {
                 audioSource.Stop();
@@ -46,5 +47,14 @@ public class PlayerHealthScript : MonoBehaviour
 
         }
     }
+
+    IEnumerator OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("ForceField")){
+            forceFieldNegation = 0f;
+            yield return new WaitForSeconds(8.0f);
+            forceFieldNegation = 1f;
+        }
+    }
+
 
 }
