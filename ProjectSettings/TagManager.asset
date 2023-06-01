@@ -6,6 +6,7 @@ TagManager:
   tags:
   - winScreen
   - speedBoost
+  - ForceField
   layers:
   - Default
   - TransparentFX
