@@ -11,16 +11,16 @@ public class PlayerMovementScript : MonoBehaviour
     public float slowdownRate = 0.95f;
     public float maxAngularVelocity = 10f;
     public bool controlsEnabled;
+    public Animator myAnim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        controlsEnabled = false;    
+        controlsEnabled = false;   
+        myAnim = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-
+    void Update(){
     }
 
     private void FixedUpdate() {
@@ -69,5 +69,17 @@ public class PlayerMovementScript : MonoBehaviour
 
     public bool areControlsEnabled() {
         return controlsEnabled;
+    }
+    private void ForceFieldAnim(){
+        myAnim.SetTrigger("OnShieldCollision");
+        
+    }
+    IEnumerator OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("ForceField")){
+            Destroy(other.gameObject);
+            ForceFieldAnim();
+            yield return new WaitForSeconds(8.0f);
+            myAnim.Play("Player");
+        }
     }
 }
