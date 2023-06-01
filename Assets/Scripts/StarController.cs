@@ -5,7 +5,7 @@ using UnityEngine;
 public class StarController : MonoBehaviour
 {
     public GameObject player;
-    public float thrustIncrement = 2f;
+    private float thrustIncrement = 5f;
     public float currentThrust;
     public float newThrust;
 
