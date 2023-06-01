@@ -2598,10 +2598,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Credits:
 
-    Jordan Miller
+    Creators: Nicole Arcolino, Jordan Miller
 
 
-    2D Space Kit - Brett Gregory: https://assetstore.unity.com/packages/2d/environments/2d-space-kit-27662
+    2D Space
+    Kit - Brett Gregory: https://assetstore.unity.com/packages/2d/environments/2d-space-kit-27662
 
 
     Freesound
@@ -2993,7 +2994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468, y: 194}
+  m_AnchoredPosition: {x: -468, y: 257.67}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957173522
@@ -3016,19 +3017,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Space: Thrust
+  m_text: 'Space: Thrust forwards
 
-    LShift: Zero-out velocity (This is your friend!)
+    LShift: Zero-out velocity (Use often!)
 
     A:
     Thrust left
+
+    S: Thrust Back
 
     D: Thrust right
 
     Left Arrow: Roll left
 
-    Right Arrow:
-    Roll Right'
+    Right
+    Arrow: Roll Right
+
+    R: Reset Game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4712,6 +4717,7 @@ MonoBehaviour:
   currentHealth: 0
   healthbar: {fileID: 1129543913}
   damageMultiplier: 0.25
+  forceFieldNegation: 1
   sc: {fileID: 0}
   audioSource: {fileID: 2005870911}
 --- !u!58 &1409393971

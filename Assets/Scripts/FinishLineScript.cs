@@ -20,5 +20,8 @@ public class FinishLineScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         timeController.StopTimer();
+        Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
     }
 }
