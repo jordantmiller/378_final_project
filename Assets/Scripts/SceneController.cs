@@ -7,10 +7,8 @@ using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
-    public TextMeshProUGUI winText;
     public TextMeshProUGUI controlText;
     public TextMeshProUGUI creditText;
-
     public Button startButton;
     public Button controlsButton;
     public Button creditsButton;
@@ -71,12 +69,11 @@ public class SceneController : MonoBehaviour
     public void resetGame() {
         SceneManager.LoadScene("MainGame");
     }
-
+    
     public void winScreen() {
         this.playerRb.velocity = Vector2.zero;
         this.playerRb.angularVelocity = 0;
     }
-
     private void OnStartClick() {
         pm = FindObjectsOfType<PlayerMovementScript>()[0];
         //playerRb.position = new Vector2(60, 10);

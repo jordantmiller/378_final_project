@@ -1127,7 +1127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d36f365181b4c4cb0a63c163d0ba50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winText: {fileID: 0}
   controlText: {fileID: 957173522}
   creditText: {fileID: 717543203}
   startButton: {fileID: 1747005852}
@@ -2264,7 +2263,6 @@ Transform:
   - {fileID: 204025572}
   - {fileID: 732063580}
   - {fileID: 1364913685}
-  - {fileID: 1242236656}
   - {fileID: 567100884}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -3010,7 +3008,7 @@ Transform:
   - {fileID: 1849170451}
   - {fileID: 1452040998}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &454382210
 PrefabInstance:
@@ -3785,7 +3783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 241867266}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &567100885
 Rigidbody2D:
@@ -4418,7 +4416,7 @@ Transform:
   - {fileID: 1578337461}
   - {fileID: 1573001789}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708533793
 GameObject:
@@ -7338,7 +7336,7 @@ GameObject:
   - component: {fileID: 1242236660}
   m_Layer: 0
   m_Name: FinishLine
-  m_TagString: Untagged
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7350,14 +7348,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242236655}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -222.1, y: -294.15, z: -1.3631787}
+  m_LocalRotation: {x: -0, y: -0, z: 0.702655, w: 0.7115307}
+  m_LocalPosition: {x: -251.6, y: -203.1, z: 0}
   m_LocalScale: {x: 0.4, y: 10.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 241867266}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.281}
 --- !u!50 &1242236657
 Rigidbody2D:
   serializedVersion: 4
@@ -7470,6 +7468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeController: {fileID: 2129064087}
+  sceneName: '"GoToLevel2"'
 --- !u!1001 &1256749555
 PrefabInstance:
   m_ObjectHideFlags: 0
