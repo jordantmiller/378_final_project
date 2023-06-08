@@ -67,7 +67,8 @@ public class SceneController : MonoBehaviour
     }
 
     public void resetGame() {
-        SceneManager.LoadScene("MainGame");
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
     
     public void winScreen() {
