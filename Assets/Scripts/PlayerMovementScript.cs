@@ -74,6 +74,7 @@ public class PlayerMovementScript : MonoBehaviour
         myAnim.SetTrigger("OnShieldCollision");
         
     }
+    
     IEnumerator OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("ForceField")){
             Destroy(other.gameObject);
