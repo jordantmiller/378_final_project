@@ -27,7 +27,7 @@ public class SceneController : MonoBehaviour
         startButton.onClick.AddListener(OnStartClick);
         controlsButton.onClick.AddListener(OnControlClick);
         creditsButton.onClick.AddListener(OnCreditClick);
-        quitButton.onClick.AddListener(OnStartClick);
+        // quitButton.onClick.AddListener(OnStartClick);
         timer = 0f;
         started = false;
     }
@@ -54,7 +54,7 @@ public class SceneController : MonoBehaviour
         //playerRb.position = new Vector2(60, 10);
         pm.enableControls(true);
         controlsButton.gameObject.SetActive(false);
-        quitButton.gameObject.SetActive(false);
+        // quitButton.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         creditsButton.gameObject.SetActive(false);
         started = true;
