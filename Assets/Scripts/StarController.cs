@@ -12,6 +12,7 @@ public class StarController : MonoBehaviour
     private float thrustIncrement = 5f;
     public float currentThrust;
     public float newThrust;
+    public AudioSource starAudioSource;
 
 
     void Start() {
@@ -20,16 +21,26 @@ public class StarController : MonoBehaviour
         GameObject textObject = GameObject.Find("StarText");
         starCountText = textObject.GetComponent<TextMeshProUGUI>();
         starCountText.text = string.Format("{0}/{1}", currentStarCount, totalStarCount);
+
+        GameObject audioSource = GameObject.Find("StarAudioSource");
+        starAudioSource = audioSource.GetComponent<AudioSource>();
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player"){
+            if (starAudioSource.isPlaying) {
+                starAudioSource.Stop();
+            }
+
+            starAudioSource.Play();
+
             player = GameObject.Find("Player");
             player.GetComponent<PlayerMovementScript>().thrust += thrustIncrement;
             Debug.Log("Added thrust. New thrust: " + player.GetComponent<PlayerMovementScript>().thrust);
             currentStarCount++;
             starCountText.text = string.Format("{0}/{1}", currentStarCount, totalStarCount);
+
             Destroy(gameObject);
         }
     }
