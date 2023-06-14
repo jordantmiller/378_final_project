@@ -71,8 +71,10 @@ public class PlayerMovementScript : MonoBehaviour
         return controlsEnabled;
     }
     private void ForceFieldAnim(){
-        myAnim.SetTrigger("OnShieldCollision");
-        
+        myAnim.SetTrigger("OnShieldCollision"); 
+    }
+    private void StarAnim(){
+        myAnim.SetTrigger("OnStarCollision");
     }
     
     IEnumerator OnTriggerEnter2D(Collider2D other){
@@ -80,6 +82,12 @@ public class PlayerMovementScript : MonoBehaviour
             Destroy(other.gameObject);
             ForceFieldAnim();
             yield return new WaitForSeconds(8.0f);
+            myAnim.Play("Player");
+        }
+        if (other.CompareTag("speedBoost")){
+            Destroy(other.gameObject);
+            StarAnim();
+            yield return new WaitForSeconds(1.0f);
             myAnim.Play("Player");
         }
     }
